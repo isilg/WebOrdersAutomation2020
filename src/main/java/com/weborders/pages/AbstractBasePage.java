@@ -28,8 +28,13 @@ public abstract class AbstractBasePage {
                                                          //page classes they will derive from this class we will not do this again
     }
 
+
+    /**
+     * Specify component name as a parameter, like: View all products or Orders
+     * @param component
+     */
     public void navigateTo(String component){
-        String locator = "//a[text()='" + component + "']";
+        String locator = "//a[text()='" + component + "']";   //component is parameter of our method (on the below: navigateTo(String component))
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator))).click();
     }
 
