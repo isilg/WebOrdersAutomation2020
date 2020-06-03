@@ -29,6 +29,7 @@ public abstract class AbstractBasePage {
     }
 
 
+
     /**
      * Specify component name as a parameter, like: View all products or Orders
      * @param component
