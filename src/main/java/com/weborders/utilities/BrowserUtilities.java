@@ -1,5 +1,4 @@
 package com.weborders.utilities;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -7,7 +6,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,7 +16,6 @@ import java.util.Set;
 public class BrowserUtilities {
     /**
      * Pause test for some time
-     *
      * @param seconds
      */
     public static void wait(int seconds) {
@@ -45,7 +42,6 @@ public class BrowserUtilities {
 
     /**
      * waits for backgrounds processes on the browser to complete
-     *
      * @param timeOutInSeconds
      */
     public static void waitForPageToLoad(long timeOutInSeconds) {
@@ -60,7 +56,6 @@ public class BrowserUtilities {
 
     /**
      * Clicks on an element using JavaScript
-     *
      * @param element
      */
     public static void clickWithJS(WebElement element) {
@@ -70,7 +65,6 @@ public class BrowserUtilities {
 
     /**
      * Scroll to element using JavaScript
-     *
      * @param element
      */
     public static void scrollTo(WebElement element) {
@@ -113,11 +107,10 @@ public class BrowserUtilities {
     }
 
     /**
-     * This method will switch webdriver from current window
-     * to target window based on page title
+     * This method switch webdriver current window to target window based on page title
      * @param title of the window to switch
      */
-    public static void scitchWindow(String title){
+    public static void switchWindow(String title){
         Set<String> windowHandles = Driver.getDriver().getWindowHandles();
         for(String window : windowHandles){
             Driver.getDriver().switchTo().window(window);
